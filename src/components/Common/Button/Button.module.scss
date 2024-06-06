@@ -10,4 +10,9 @@
 	padding: 0 7px;
 	box-sizing: border-box;
 	font-size: 15px;
+	cursor: pointer;
+
+	&:hover {
+		background-color: #F8F8FC;
+	}
 }

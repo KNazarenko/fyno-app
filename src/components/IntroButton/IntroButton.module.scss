@@ -1,0 +1,12 @@
+@import '../../assets/utilities/theme.scss';
+
+.root {
+	width: 125px;
+	border: none;
+	color: $color714EFF;
+
+	&:hover {
+		background-color: transparent;
+		color: rgb(73, 41, 199);
+	}
+}

@@ -1,0 +1,18 @@
+@import '../../assets/utilities/theme.scss';
+
+.root {
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+	justify-content: center;
+	color: $color3C3C43;
+
+}
+
+.value {
+	color: $color000000;
+	font-weight: 600;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: -0.3px;
+}

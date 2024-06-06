@@ -21,9 +21,17 @@ const Button: FC<ButtonProps> = (props) => {
 		isActive,
 		isBasic = true,
 	} = props;
+
+	const handleClick = (evt: OnMouseEvent) => {
+		evt.preventDefault();
+		if (typeof onClick === "function") {
+			onClick(evt);
+		}
+	};
+
 	return (
 		<div
-			onClick={onClick}
+			onClick={handleClick}
 			className={classNames(styles.root, className, {
 				[styles.iconActive]: !disabled,
 				[styles.disabled]: disabled,

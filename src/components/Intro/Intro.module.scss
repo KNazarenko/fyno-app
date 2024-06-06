@@ -1,7 +1,22 @@
-@import "../../utilities/variables";
+@import "../../assets/utilities/variables";
+@import "../../assets/utilities/theme.scss";
 
 .root {
 	width: $width;
 	height: 149px;
-	background-color: aqua;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.wrapper {
+	border: 1px solid $primaryColor;
+	width: 697px;
+	height: 93px;
+	border-radius: 16px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 27px;
+	box-sizing: border-box;
 }

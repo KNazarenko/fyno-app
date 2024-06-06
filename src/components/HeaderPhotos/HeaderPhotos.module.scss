@@ -1,4 +1,4 @@
-@import "../../utilities/variables";
+@import "../../assets/utilities/variables";
 
 .root {
 	width: $width;
@@ -8,6 +8,18 @@
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 4px;
+	position: relative;
+}
+
+.wrapper {
+	width: calc($width - 32px - 32px);
+	height: 292px;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 4px;
+	border-radius: 26px;
+	overflow: hidden;
 }
 
 .firstElem {

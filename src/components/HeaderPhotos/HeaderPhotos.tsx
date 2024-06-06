@@ -6,6 +6,7 @@ import frame02 from "../../assets/pictures/Frame 02.png";
 import frame03 from "../../assets/pictures/Frame 03.png";
 import frame04 from "../../assets/pictures/Frame 04.png";
 import frame05 from "../../assets/pictures/Frame 05.png";
+import HeaderPhotosButton from "../HeaderPhotosButton/HeaderPhotosButton";
 
 const Photos = [
 	{
@@ -38,19 +39,22 @@ const Photos = [
 const HeaderPhotos: FC = () => {
 	return (
 		<div className={styles.root}>
-			{Photos &&
-				Photos.map((item, index) => {
-					return (
-						<img
-							className={classNames({
-								[styles.firstElem]: index === 0,
-							})}
-							key={item.name}
-							src={item.urlLocal}
-							alt={item.name}
-						/>
-					);
-				})}
+			<div className={styles.wrapper}>
+				{Photos &&
+					Photos.map((item, index) => {
+						return (
+							<img
+								className={classNames({
+									[styles.firstElem]: index === 0,
+								})}
+								key={item.name}
+								src={item.urlLocal}
+								alt={item.name}
+							/>
+						);
+					})}
+			</div>
+			<HeaderPhotosButton />
 		</div>
 	);
 };
