@@ -1,0 +1,13 @@
+.root {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	height: 32px;
+	width: 91px;
+	border-radius: 16px;
+	font-weight: 600;
+	border: 1px solid rgba(151, 151, 151, 0.3);
+	padding: 0 7px;
+	box-sizing: border-box;
+	font-size: 15px;
+}

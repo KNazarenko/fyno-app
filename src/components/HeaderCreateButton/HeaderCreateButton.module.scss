@@ -1,0 +1,13 @@
+@import "../../utilities/variables";
+
+.root {
+	width: $width;
+	height: 72px;
+	background-color: aqua;
+}
+
+.icon {
+	background: transparent url('../../../src/assets/icons/Union.svg') center no-repeat padding-box;
+	height: 13px;
+	width: 13px;
+}

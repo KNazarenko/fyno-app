@@ -1,0 +1,12 @@
+@import "../../utilities/variables";
+
+.root {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: $width;
+	height: 72px;
+	// border: 1px solid gray;
+	padding: 0 32px;
+	box-sizing: border-box;
+}
