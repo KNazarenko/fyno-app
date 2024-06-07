@@ -4,10 +4,10 @@ import HeaderCreateButton from "../HeaderCreateButton/HeaderCreateButton";
 
 const Header: FC = () => {
 	return (
-		<div className={styles.root}>
+		<section className={styles.root}>
 			<HeaderCreateButton />
 			<HeaderCreateButton />
-		</div>
+		</section>
 	);
 };
 

@@ -1,0 +1,12 @@
+@import "../../assets/utilities/variables";
+
+.root {
+	width: 91px;
+	border-radius: 8px;
+}
+
+.icon {
+	background: transparent url('../../../src/assets/icons/Share.svg') center no-repeat padding-box;
+	height: 18px;
+	width: 13px;
+}

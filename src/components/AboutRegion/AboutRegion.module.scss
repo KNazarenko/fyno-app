@@ -2,6 +2,34 @@
 
 .root {
 	width: $width;
-	height: 249px;
-	background-color: lavender;
+	min-height: 249px;
+	box-sizing: border-box;
+	padding: 32px;
+}
+
+.titleWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+
+.region {
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 36px;
+}
+
+.buttonWrapper {
+	display: flex;
+	gap: 10px
+}
+
+.aboutRegion {
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.41px;
+	text-align: justify;
+	margin-top: 16px;
 }

@@ -1,0 +1,18 @@
+.root {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 14px;
+	height: 40px;
+	min-width: 70px;
+	border-radius: 8px;
+	padding: 0 12px;
+	border: 1px solid rgba(151, 151, 151, 0.3);
+	background-color: rgba(255, 255, 255, 1);
+	box-sizing: border-box;
+	font-weight: 400;
+	font-size: 15px;
+	line-height: 21px;
+	letter-spacing: -0.2px;
+	color: rgba(60, 60, 67, 0.8);
+}

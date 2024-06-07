@@ -11,7 +11,7 @@ const Data = [
 
 const Intro: FC = () => {
 	return (
-		<div className={styles.root}>
+		<section className={styles.root}>
 			<div className={styles.wrapper}>
 				{Data &&
 					Data.map((item) => {
@@ -22,7 +22,7 @@ const Intro: FC = () => {
 
 				<IntroButton />
 			</div>
-		</div>
+		</section>
 	);
 };
 

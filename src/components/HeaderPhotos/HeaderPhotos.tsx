@@ -38,7 +38,7 @@ const Photos = [
 
 const HeaderPhotos: FC = () => {
 	return (
-		<div className={styles.root}>
+		<section className={styles.root}>
 			<div className={styles.wrapper}>
 				{Photos &&
 					Photos.map((item, index) => {
@@ -55,7 +55,7 @@ const HeaderPhotos: FC = () => {
 					})}
 			</div>
 			<HeaderPhotosButton />
-		</div>
+		</section>
 	);
 };
 
