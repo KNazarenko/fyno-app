@@ -9,7 +9,7 @@ const getExpert = [
 	},
 ];
 
-const AboutRegionExpert: FC = (props) => {
+const AboutRegionExpert: FC = () => {
 	return (
 		<div className={styles.root}>
 			<div className={styles.avatar}>

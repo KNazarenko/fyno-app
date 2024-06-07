@@ -9,7 +9,7 @@ const ItineraryData = {
 	persons: "2",
 };
 
-const ItineraryWidget: FC = (props) => {
+const ItineraryWidget: FC = () => {
 	return (
 		<div className={styles.root}>
 			<ItineraryButton className={styles.departure}>
