@@ -1,0 +1,9 @@
+@import "../../assets/utilities/variables";
+
+.root {
+	width: $width;
+	height: auto;
+	padding: 0 32px 24px;
+	box-sizing: border-box;
+	border: 1px solid gray;
+}

@@ -1,0 +1,13 @@
+@import "../../assets/utilities/variables";
+
+.root {
+	border-radius: 8px;
+	padding-left: 4px;
+	margin-right: 27px;
+}
+
+.icon {
+	background: transparent url('../../../src/assets/icons/Daily_plan.svg') center no-repeat padding-box;
+	height: 32px;
+	width: 32px;
+}

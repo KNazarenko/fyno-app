@@ -16,7 +16,11 @@ const Intro: FC = () => {
 				{Data &&
 					Data.map((item) => {
 						return (
-							<IntroItem title={item.title} value={item.value} />
+							<IntroItem
+								key={item.title}
+								title={item.title}
+								value={item.value}
+							/>
 						);
 					})}
 

@@ -4,7 +4,7 @@ import HeaderPhotos from "./components/HeaderPhotos/HeaderPhotos";
 import Intro from "./components/Intro/Intro";
 import AboutRegion from "./components/AboutRegion/AboutRegion";
 import Itinerary from "./components/Itinerary/Itinerary";
-import ItineraryDetail from "./components/ItineraryDetail/ItineraryDetail";
+import TripDetail from "./components/TripDetail/TripDetail";
 
 function App() {
 	return (
@@ -14,8 +14,7 @@ function App() {
 			<Intro />
 			<AboutRegion />
 			<Itinerary />
-			<ItineraryDetail />
-			<ItineraryDetail />
+			<TripDetail />
 		</>
 	);
 }

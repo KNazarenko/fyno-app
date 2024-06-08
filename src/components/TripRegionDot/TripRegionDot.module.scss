@@ -1,0 +1,24 @@
+@import "../../assets/utilities/theme";
+
+// .root {
+// 	width: 24px;
+// 	height: 24px;
+// 	box-sizing: border-box;
+// 	background-color: $color714EFF;
+// 	border-radius: 12px;
+// 	display: flex;
+// 	flex-direction: column;
+// 	gap: 16px;
+// }
+.root {
+	width: 24px;
+	height: 24px;
+	box-sizing: border-box;
+	background-color: $color714EFF;
+	border-radius: 12px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $colorFFFFFF;
+	font-size: 14px;
+}

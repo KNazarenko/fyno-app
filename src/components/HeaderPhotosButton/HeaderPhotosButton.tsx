@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./HeaderPhotosButton.module.scss";
 import Button, { OnMouseEvent } from "../Common/Button/Button";
+import { Buttons } from "../../enums/Buttons";
 
 const HeaderPhotosButton: FC = () => {
 	return (
@@ -8,7 +9,7 @@ const HeaderPhotosButton: FC = () => {
 			className={styles.root}
 			onClick={(e: OnMouseEvent) => console.log("All Photos", e)}>
 			<i className={styles.icon} />
-			All photos
+			{Buttons.AllPhotos}
 		</Button>
 	);
 };

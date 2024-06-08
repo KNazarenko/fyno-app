@@ -1,17 +1,17 @@
 import { FC } from "react";
-import styles from "./AboutRegionShareButton.module.scss";
+import styles from "./TripDailyPlanButton.module.scss";
 import Button, { OnMouseEvent } from "../Common/Button/Button";
 import { Buttons } from "../../enums/Buttons";
 
-const AboutRegionShareButton: FC = () => {
+const TripDailyPlanButton: FC = () => {
 	return (
 		<Button
 			className={styles.root}
 			onClick={(e: OnMouseEvent) => console.log(e)}>
 			<i className={styles.icon} />
-			{Buttons.Share}
+			{Buttons.ShowDailyPlan}
 		</Button>
 	);
 };
 
-export default AboutRegionShareButton;
+export default TripDailyPlanButton;
