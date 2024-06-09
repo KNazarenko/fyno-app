@@ -8,6 +8,17 @@
 	gap: 16px;
 	padding: 12px 0;
 	border: 1px solid darkred;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 32px;
+		height: 80%;
+		top: 60px;
+		right: -32px;
+		background-color: $colorFFFFFF;
+	}
 }
 
 .sectionWrapper {

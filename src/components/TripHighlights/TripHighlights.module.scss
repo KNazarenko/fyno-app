@@ -8,10 +8,32 @@
 	gap: 16px;
 	padding: 12px 0;
 	border: 1px solid darkred;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 32px;
+		height: 80%;
+		top: 60px;
+		right: -32px;
+		background-color: $colorFFFFFF;
+	}
 }
 
 .dotWrapper {
 	margin-top: 4px;
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 2px;
+		height: 99%;
+		top: 27px;
+		right: 11px;
+		background-color: rgba(60, 60, 67, 0.18);
+	}
 }
 
 .sectionWrapper {

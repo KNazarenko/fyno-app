@@ -2,7 +2,7 @@
 
 .root {
 	width: 216px;
-	height: 356px;
+	height: auto;
 	box-sizing: border-box;
 }
 
@@ -46,6 +46,24 @@
 	line-height: 21px;
 	letter-spacing: -0.2px;
 	color: rgba(60, 60, 67, 0.8);
+}
+
+.ratingWrapper {
+	display: flex;
+	gap: 5px;
+	justify-content: start;
+	align-items: center;
+
+	font-size: 13px;
+	font-weight: 600;
+	line-height: 16px;
+	color: $color000000;
+}
+
+.ratingIcon {
+	width: 16px;
+	height: 16px;
+	background: transparent url('../../assets/icons/Rating.svg') center no-repeat padding-box;
 }
 
 .dot {

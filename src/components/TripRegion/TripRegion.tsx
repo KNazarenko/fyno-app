@@ -16,7 +16,7 @@ const TripRegion: FC = () => {
 	const data = RegionData[0];
 	return (
 		<div className={styles.root}>
-			<div>
+			<div className={styles.dotWrapper}>
 				<TripRegionDot>{data.id}</TripRegionDot>
 			</div>
 			<div className={styles.wrapper}>

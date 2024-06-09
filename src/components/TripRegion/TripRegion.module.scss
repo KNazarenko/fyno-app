@@ -4,10 +4,23 @@
 	width: 100%;
 	min-height: 200px;
 	box-sizing: border-box;
-	border: 1px solid darkblue;
 	display: flex;
 	gap: 16px;
 	padding: 12px 0;
+}
+
+.dotWrapper {
+	position: relative;
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 2px;
+		height: 99%;
+		top: 28px;
+		right: 11px;
+		background-color: rgba(60, 60, 67, 0.18);
+	}
 }
 
 .wrapper {

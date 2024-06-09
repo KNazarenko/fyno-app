@@ -1,9 +1,28 @@
 import { FC } from "react";
 import styles from "./TripDetailCard.module.scss";
-import { ICard } from "../TripHighlights/TripHighlights";
+import { CardType } from "../../enums/CardType";
 
-const TripDetailCard: FC<ICard> = (props) => {
-	const { url, title, duration, name } = props;
+interface TripDetailCardProps {
+	id: string;
+	url: string;
+	title: string;
+	place: string;
+	duration?: string;
+	rating?: string;
+	price?: string;
+	cardType: CardType;
+}
+
+const TripDetailCard: FC<TripDetailCardProps> = (props) => {
+	const {
+		url,
+		title,
+		place,
+		duration = "",
+		rating = "",
+		price = "",
+		cardType,
+	} = props;
 	return (
 		<div className={styles.root}>
 			<div className={styles.images}>
@@ -11,10 +30,20 @@ const TripDetailCard: FC<ICard> = (props) => {
 			</div>
 			<div className={styles.footer}>
 				<div className={styles.title}>{title}</div>
+				{cardType === CardType.Stay && (
+					<div className={styles.ratingWrapper}>
+						<i className={styles.ratingIcon}></i>
+						{rating}
+					</div>
+				)}
 				<div className={styles.wrapper}>
-					<span>{duration}h</span>
+					{cardType === CardType.Highlights ? (
+						<span>{duration}h</span>
+					) : (
+						<span>${price}</span>
+					)}
 					<span className={styles.dot}></span>
-					<span>{name}</span>
+					<span>{place}</span>
 				</div>
 			</div>
 		</div>
