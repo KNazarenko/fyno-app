@@ -15,7 +15,7 @@
 		width: 32px;
 		height: 80%;
 		top: 60px;
-		right: -32px;
+		right: -28px;
 		background-color: $colorFFFFFF;
 	}
 }
@@ -59,4 +59,14 @@
 	gap: 16px;
 	margin-top: 24px;
 
+}
+
+.dotIcon {
+	background-color: rgba(157, 157, 161, 1);
+}
+
+.icon {
+	height: 12.5px;
+	width: 12.5px;
+	background: transparent url('../../../src/assets/icons/Sparkle.svg') center no-repeat padding-box;
 }

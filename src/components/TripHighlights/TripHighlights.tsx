@@ -14,7 +14,9 @@ const TripHighlights: FC<TripHighlightsProps> = (props) => {
 	return (
 		<div className={styles.root}>
 			<div className={styles.dotWrapper}>
-				<TripRegionDot>I</TripRegionDot>
+				<TripRegionDot className={styles.dotIcon}>
+					<i className={styles.icon} />
+				</TripRegionDot>
 			</div>
 			<div className={styles.sectionWrapper}>
 				<div className={styles.titleWrapper}>
@@ -23,12 +25,14 @@ const TripHighlights: FC<TripHighlightsProps> = (props) => {
 				</div>
 				<div className={styles.cards}>
 					{highlights &&
-						highlights.map((item: ITripHighlight) => {
+						highlights.map((item: ITripHighlight, index) => {
 							return (
 								<TripDetailCard
 									key={item.id}
 									{...item}
 									cardType={CardType.Highlights}
+									isPickButtonVisible={index !== 2}
+									isArrowButtonVisible={index === 2}
 								/>
 							);
 						})}
