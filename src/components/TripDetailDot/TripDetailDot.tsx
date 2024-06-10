@@ -1,13 +1,13 @@
 import { FC } from "react";
-import styles from "./TripRegionDot.module.scss";
+import styles from "./TripDetailDot.module.scss";
 import classNames from "classnames";
 
-interface TripRegionDotProps {
+interface TripDetailDotProps {
 	className?: string;
 	children?: React.ReactNode;
 }
 
-const TripRegionDot: FC<TripRegionDotProps> = (props) => {
+const TripDetailDot: FC<TripDetailDotProps> = (props) => {
 	const { className } = props;
 	return (
 		<div className={classNames(styles.root, className)}>
@@ -16,4 +16,4 @@ const TripRegionDot: FC<TripRegionDotProps> = (props) => {
 	);
 };
 
-export default TripRegionDot;
+export default TripDetailDot;

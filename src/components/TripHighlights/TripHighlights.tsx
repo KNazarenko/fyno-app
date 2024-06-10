@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./TripHighlights.module.scss";
-import TripRegionDot from "../TripRegionDot/TripRegionDot";
+import TripDetailDot from "../TripDetailDot/TripDetailDot";
 import TripDailyPlanButton from "../TripDailyPlanButton/TripDailyPlanButton";
 import TripDetailCard from "../TripDetailCard/TripDetailCard";
 import { CardType } from "../../enums/CardType";
@@ -14,9 +14,9 @@ const TripHighlights: FC<TripHighlightsProps> = (props) => {
 	return (
 		<div className={styles.root}>
 			<div className={styles.dotWrapper}>
-				<TripRegionDot className={styles.dotIcon}>
+				<TripDetailDot className={styles.dotIcon}>
 					<i className={styles.icon} />
-				</TripRegionDot>
+				</TripDetailDot>
 			</div>
 			<div className={styles.sectionWrapper}>
 				<div className={styles.titleWrapper}>

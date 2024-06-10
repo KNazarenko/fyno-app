@@ -1,6 +1,6 @@
 import { FC } from "react";
 import styles from "./TripRegion.module.scss";
-import TripRegionDot from "../TripRegionDot/TripRegionDot";
+import TripRegionDot from "../TripDetailDot/TripDetailDot";
 
 interface TripRegionProps {
 	option: string;
