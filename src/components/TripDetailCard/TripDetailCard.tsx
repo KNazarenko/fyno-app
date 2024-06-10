@@ -1,6 +1,7 @@
 import { FC } from "react";
 import styles from "./TripDetailCard.module.scss";
 import { CardType } from "../../enums/CardType";
+import TripDetailCuratorPickButton from "../TripDetailCuratorPickButton/TripDetailCuratorPickButton";
 
 interface TripDetailCardProps {
 	id: string;
@@ -28,6 +29,7 @@ const TripDetailCard: FC<TripDetailCardProps> = (props) => {
 			<div className={styles.images}>
 				<img className={styles.image} src={url} alt={title} />
 			</div>
+			<TripDetailCuratorPickButton className={styles.pickButton} />
 			<div className={styles.footer}>
 				<div className={styles.title}>{title}</div>
 				{cardType === CardType.Stay && (

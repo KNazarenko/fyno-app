@@ -5,4 +5,5 @@ export enum Buttons {
 	AddToWishlist = "Add to wishlist",
 	Share = "Share",
 	ShowDailyPlan = "Show daily plan",
+	CuratorPick = "Curator's pick",
 }

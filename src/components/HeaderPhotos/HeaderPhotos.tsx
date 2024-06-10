@@ -1,11 +1,11 @@
 import { FC } from "react";
 import styles from "./HeaderPhotos.module.scss";
 import classNames from "classnames";
-import frame01 from "../../assets/pictures/Frame 01.png";
-import frame02 from "../../assets/pictures/Frame 02.png";
-import frame03 from "../../assets/pictures/Frame 03.png";
-import frame04 from "../../assets/pictures/Frame 04.png";
-import frame05 from "../../assets/pictures/Frame 05.png";
+import frame01 from "../../assets/images/Frame 01.png";
+import frame02 from "../../assets/images/Frame 02.png";
+import frame03 from "../../assets/images/Frame 03.png";
+import frame04 from "../../assets/images/Frame 04.png";
+import frame05 from "../../assets/images/Frame 05.png";
 import HeaderPhotosButton from "../HeaderPhotosButton/HeaderPhotosButton";
 
 const Photos = [
