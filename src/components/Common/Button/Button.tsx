@@ -5,7 +5,7 @@ import classNames from "classnames";
 export type OnMouseEvent = React.MouseEvent<HTMLDivElement, MouseEvent>;
 
 interface ButtonProps {
-	onClick: (evt: OnMouseEvent) => void;
+	onClick?: (evt: OnMouseEvent) => void;
 	disabled?: boolean;
 	className?: string;
 	isActive?: boolean;
