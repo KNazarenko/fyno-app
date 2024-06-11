@@ -66,20 +66,7 @@
 	color: $color000000;
 }
 
-.cards {
-	display: flex;
-	gap: 16px;
-	margin-top: 32px;
-	opacity: 1;
-	height: auto;
-	transition: 0.3s;
-}
 
-.hide {
-	opacity: 0;
-	height: 0;
-	overflow: hidden;
-}
 
 .dotIcon {
 	background-color: rgba(157, 157, 161, 1);

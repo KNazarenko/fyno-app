@@ -1,17 +1,21 @@
 import { FC } from "react";
 import styles from "./TripRegion.module.scss";
 import TripRegionDot from "../TripDetailDot/TripDetailDot";
+import { ShowButton } from "../TripDetailSection/TripDetailSection";
+import TripShowButton from "../TripShowButton/TripShowButton";
 
 interface TripRegionProps {
 	option: string;
 	title: string;
 	post: string;
+	onClickHandle: () => void;
+	showButton: ShowButton;
 }
 
 const Sights = ["Geysers", "Waterfalls", "Crater lakes"];
 
 const TripRegion: FC<TripRegionProps> = (props) => {
-	const { option, title, post } = props;
+	const { option, title, post, onClickHandle, showButton } = props;
 	return (
 		<div className={styles.root}>
 			<div className={styles.dotWrapper}>
@@ -30,6 +34,9 @@ const TripRegion: FC<TripRegionProps> = (props) => {
 						})}
 				</div>
 				<div className={styles.post}>{post}</div>
+			</div>
+			<div className={styles.showButtonWrapper}>
+				<TripShowButton onClick={onClickHandle} type={showButton} />
 			</div>
 		</div>
 	);

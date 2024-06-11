@@ -8,4 +8,5 @@ export enum Buttons {
 	CuratorPick = "Curator's pick",
 	Trips = "Trips",
 	Iceland = "Iceland",
+	ShowHighlights = "Show highlights",
 }

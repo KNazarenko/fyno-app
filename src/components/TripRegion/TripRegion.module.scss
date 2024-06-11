@@ -7,6 +7,7 @@
 	display: flex;
 	gap: 16px;
 	padding: 12px 0;
+	position: relative;
 }
 
 .dotWrapper {
@@ -61,4 +62,13 @@
 	text-align: start;
 	color: rgba(60, 60, 67, 0.8);
 	margin-top: 18px;
+}
+
+.showButtonWrapper {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	position: absolute;
+	bottom: -44px;
+	right: -22px;
 }
