@@ -6,4 +6,6 @@ export enum Buttons {
 	Share = "Share",
 	ShowDailyPlan = "Show daily plan",
 	CuratorPick = "Curator's pick",
+	Trips = "Trips",
+	Iceland = "Iceland",
 }

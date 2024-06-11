@@ -1,13 +1,16 @@
 import { FC } from "react";
 import styles from "./TripDailyPlanButton.module.scss";
-import Button, { OnMouseEvent } from "../Common/Button/Button";
+import Button from "../Common/Button/Button";
 import { Buttons } from "../../enums/Buttons";
+import { OnMouseEvent } from "../ItineraryButton/ItineraryButton";
 
-const TripDailyPlanButton: FC = () => {
+interface TripDailyPlanButtonProps {
+	onClick: (e: OnMouseEvent) => void;
+}
+
+const TripDailyPlanButton: FC<TripDailyPlanButtonProps> = ({ onClick }) => {
 	return (
-		<Button
-			className={styles.root}
-			onClick={(e: OnMouseEvent) => console.log(e)}>
+		<Button className={styles.root} onClick={onClick}>
 			<i className={styles.icon} />
 			{Buttons.ShowDailyPlan}
 		</Button>

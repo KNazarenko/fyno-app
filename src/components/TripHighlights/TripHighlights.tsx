@@ -1,16 +1,25 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import styles from "./TripHighlights.module.scss";
+import classNames from "classnames";
 import TripDetailDot from "../TripDetailDot/TripDetailDot";
 import TripDailyPlanButton from "../TripDailyPlanButton/TripDailyPlanButton";
 import TripDetailCard from "../TripDetailCard/TripDetailCard";
 import { CardType } from "../../enums/CardType";
 import { ITripHighlight } from "../../interfaces/ITripDetail";
+import { OnMouseEvent } from "../Common/Button/Button";
 
 interface TripHighlightsProps {
 	highlights: ITripHighlight[];
 }
 const TripHighlights: FC<TripHighlightsProps> = (props) => {
 	const { highlights } = props;
+	const [active, setActive] = useState(true);
+
+	const onClickHandle = (e: OnMouseEvent) => {
+		console.log(e);
+		setActive(!active);
+	};
+
 	return (
 		<div className={styles.root}>
 			<div className={styles.dotWrapper}>
@@ -21,9 +30,12 @@ const TripHighlights: FC<TripHighlightsProps> = (props) => {
 			<div className={styles.sectionWrapper}>
 				<div className={styles.titleWrapper}>
 					<div className={styles.title}>Region highlights</div>
-					<TripDailyPlanButton />
+					<TripDailyPlanButton onClick={onClickHandle} />
 				</div>
-				<div className={styles.cards}>
+				<div
+					className={classNames(styles.cards, {
+						[styles.hide]: active,
+					})}>
 					{highlights &&
 						highlights.map((item: ITripHighlight, index) => {
 							return (
