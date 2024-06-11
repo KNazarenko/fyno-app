@@ -1,7 +1,7 @@
 import { useContext } from "react";
-import { MyContext } from "../App";
 import { IData } from "../interfaces/IData";
+import { AllDataContext } from "../Context";
 
 export function useData() {
-	return useContext<IData>(MyContext);
+	return useContext<IData>(AllDataContext);
 }

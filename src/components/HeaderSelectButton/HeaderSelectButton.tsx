@@ -1,15 +1,16 @@
-import { FC, useState } from "react";
+import { FC } from "react";
 import styles from "./HeaderSelectButton.module.scss";
 import classNames from "classnames";
 import Button, { OnMouseEvent } from "../Common/Button/Button";
+import { useAmountOfDays } from "../../hooks/useAmountOfDays";
 
 const dayOptions: string[] = ["5", "6", "7", "8", "9", "10"];
 
 const HeaderSelectButton: FC = () => {
-	const [days, setDays] = useState<string>("7");
+	const { days, handleSetDay } = useAmountOfDays();
 
 	const onClickHandle = (e: OnMouseEvent) => {
-		setDays(e.currentTarget.innerHTML);
+		handleSetDay(e.currentTarget.innerHTML);
 	};
 
 	return (
