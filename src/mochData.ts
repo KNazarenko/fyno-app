@@ -10,22 +10,52 @@ import stay02 from "./assets/images/stays02.png";
 import stay03 from "./assets/images/stays03.png";
 import stay04 from "./assets/images/stays04.png";
 import stay05 from "./assets/images/stays05.png";
+import expert from "./assets/images/expert.jpeg";
+import frame01 from "./assets/images/Frame 01.png";
+import frame02 from "./assets/images/Frame 02.png";
+import frame03 from "./assets/images/Frame 03.png";
+import frame04 from "./assets/images/Frame 04.png";
+import frame05 from "./assets/images/Frame 05.png";
 
 const GetData = {
-	intro: {
-		duration: 7,
-		exploration: 4,
-		flight: "7h 20m from SFO",
-	},
+	photos: [
+		{
+			name: "frame01",
+			url: frame01,
+		},
+		{
+			name: "frame02",
+			url: frame02,
+		},
+		{
+			name: "frame03",
+			url: frame03,
+		},
+		{
+			name: "frame04",
+			url: frame04,
+		},
+		{
+			name: "frame05",
+			url: frame05,
+		},
+	],
+	intro: [
+		{ title: "Trip duration", value: " days" },
+		{ title: "Exploration", value: "4 regions" },
+		{ title: "Flight", value: "7h 20m from SFO" },
+	],
 	aboutRegion: {
 		title: "Iceland's Highlights",
 		curatedName: "Sandra",
-		url: "https://s3-alpha-sig.figma.com/img/6b35/0c7e/993dea27641da83edc50d8e980f7f2d7?Expires=1718582400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=TNDvcz-KFBq~MvjMveehgHbZ-d8W0qtD16hGCteeijAUhSp6QJiwA1xN4OFLKDrmbg2EY0BDZUXDLH2Do~bLfCXLYm7Y5gUr-oeNrggF6Px8wBva2hfs66D5u3DaVa-0~DeasP-i037VmfRDE8~Aup8~WDbX~g0Nh0n3DTOMNN3y~QV8MsA9yraKeLOlXABdTo2lIH7T0aX5egTlggZOyw1BZH0mrQVo1CvhufTXHFWYDCimYlKIOYsovFoFa7EeSPhLksSFmohxcFt0urXBgnNA6iHq34YfEQQQTbi3uMNcDDdzqVYntVAF90AGUXUQepxvL~9z75ZRSc30rtpHtQ__",
+		url: expert,
+		about: "Welcome to Iceland, a land of breathtaking landscapes and unspoiled natural beauty. From its majestic waterfalls and geothermal wonders to the vibrant culture and rich history, Iceland promises an unforgettable adventure for every traveler.",
 	},
 	itinerary: {
+		title: "Iceland",
 		from: "Reykjavík, KEF",
 		to: "San Francisco, SFO",
-		dates: "Jul 03 – Jul 11s",
+		dates: "Jul 03 – Jul 11",
 		persons: "2",
 	},
 	tripDetails: [

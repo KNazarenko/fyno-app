@@ -16,7 +16,7 @@ interface TripDetailSectionProps {
 const TripDetailSection: FC<TripDetailSectionProps> = ({ trip }) => {
 	const { option, regionTitle, aboutRegion, highlights, stays, plan } = trip;
 	const [showButton, setShowButton] = useState<ShowButton>(
-		Buttons.ShowHighlights
+		Buttons.ShowDailyPlan
 	);
 
 	const onClickHandle = () => {
@@ -35,11 +35,11 @@ const TripDetailSection: FC<TripDetailSectionProps> = ({ trip }) => {
 				onClickHandle={onClickHandle}
 				showButton={showButton}
 			/>
-			<TripPlan hide={showButton === Buttons.ShowDailyPlan} plan={plan} />
 			<TripHighlights
 				highlights={highlights}
 				hide={showButton === Buttons.ShowHighlights}
 			/>
+			<TripPlan hide={showButton === Buttons.ShowDailyPlan} plan={plan} />
 			<TripStays stays={stays} />
 		</section>
 	);

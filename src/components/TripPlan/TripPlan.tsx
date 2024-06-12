@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
 import styles from "./TripPlan.module.scss";
 import classNames from "classnames";
 import TripDetailDot from "../TripDetailDot/TripDetailDot";
@@ -13,7 +13,6 @@ interface TripHighlightsProps {
 
 const TripPlan: FC<TripHighlightsProps> = ({ plan, hide }) => {
 	const { sectionTitle, days } = plan;
-	console.log(plan);
 	return (
 		<div
 			className={classNames(styles.root, {
@@ -32,16 +31,21 @@ const TripPlan: FC<TripHighlightsProps> = ({ plan, hide }) => {
 					days.map((item: ITripPlanDay) => {
 						const { day, commonDuration, cards } = item;
 						return (
-							<>
+							<Fragment key={day}>
 								<TripPlanDay
 									commonDuration={commonDuration}
 									day={day}
 								/>
 								{cards &&
 									cards.map((card) => {
-										return <TripPlanCard {...card} />;
+										return (
+											<TripPlanCard
+												{...card}
+												key={card.id}
+											/>
+										);
 									})}
-							</>
+							</Fragment>
 						);
 					})}
 			</div>

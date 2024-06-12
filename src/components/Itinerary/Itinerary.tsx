@@ -1,14 +1,15 @@
 import { FC } from "react";
 import styles from "./Itinerary.module.scss";
 import ItineraryWidget from "../ItineraryWidget/ItineraryWidget";
-
-const ItineraryName = "Iceland";
+import { useData } from "../../hooks/useData";
 
 const Itinerary: FC = () => {
+	const { itinerary } = useData();
+	const { title, ...rest } = itinerary;
 	return (
 		<section className={styles.root}>
-			<div className={styles.title}>{ItineraryName} itinerary</div>
-			<ItineraryWidget />
+			<div className={styles.title}>{title} itinerary</div>
+			<ItineraryWidget {...rest} />
 		</section>
 	);
 };

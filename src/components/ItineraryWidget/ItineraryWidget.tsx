@@ -2,30 +2,29 @@ import { FC } from "react";
 import styles from "./ItineraryWidget.module.scss";
 import ItineraryButton from "../ItineraryButton/ItineraryButton";
 
-const ItineraryData = {
-	departure: "Reykjavík, KEF",
-	arrive: "San Francisco, SFO",
-	date: "Jul 03 – Jul 11",
-	persons: "2",
-};
+interface ItineraryWidgetProps {
+	from: string;
+	to: string;
+	dates: string;
+	persons: string;
+}
 
-const ItineraryWidget: FC = () => {
+const ItineraryWidget: FC<ItineraryWidgetProps> = (props) => {
+	const { from, to, dates, persons } = props;
 	return (
 		<div className={styles.root}>
 			<ItineraryButton className={styles.departure}>
-				{ItineraryData.departure}
+				{from}
 			</ItineraryButton>
 			<i className={styles.iconPlane} />
-			<ItineraryButton className={styles.arrive}>
-				{ItineraryData.arrive}
-			</ItineraryButton>
+			<ItineraryButton className={styles.arrive}>{to}</ItineraryButton>
 			<ItineraryButton className={styles.date}>
 				<i className={styles.iconDate} />
-				{ItineraryData.date}
+				{dates}
 			</ItineraryButton>
 			<ItineraryButton>
 				<i className={styles.iconPerson} />
-				{ItineraryData.persons}
+				{persons}
 			</ItineraryButton>
 		</div>
 	);
