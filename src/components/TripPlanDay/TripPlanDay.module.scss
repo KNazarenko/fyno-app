@@ -1,0 +1,52 @@
+@import "../../assets/utilities/theme";
+
+.root {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	display: flex;
+	gap: 16px;
+	padding: 20px 0 10px;
+}
+
+.header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: -0.41px;
+	text-align: start;
+	color: $color000000;
+}
+
+.durationWrapper {
+	height: 32px;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-size: 13px;
+	font-weight: 500;
+	line-height: 18px;
+	letter-spacing: -0.08px;
+	text-align: start;
+	color: rgba(60, 60, 67, 0.8);
+}
+
+.arrowIcon {
+	height: 32px;
+	width: 32px;
+	background: transparent url('../../../src/assets/icons/Arrow_in_square.svg') center no-repeat padding-box;
+}
+
+.dotsIcon {
+	margin-left: 20px;
+	height: 32px;
+	width: 32px;
+	background: transparent url('../../../src/assets/icons/Three_Dots.svg') center no-repeat padding-box;
+}

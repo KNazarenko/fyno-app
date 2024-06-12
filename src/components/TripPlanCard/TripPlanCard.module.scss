@@ -1,0 +1,122 @@
+@import "../../assets/utilities/theme";
+
+.root {
+	width: 100%;
+	height: auto;
+	box-sizing: border-box;
+	display: flex;
+	gap: 16px;
+	padding: 12px 0;
+	justify-content: space-between;
+	align-items: center;
+	position: relative;
+}
+
+.planCardDot {
+	position: absolute;
+	left: -32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 8px;
+	height: 8px;
+	border-radius: 5px;
+	background-color: $colorFFFFFF;
+	box-sizing: border-box;
+
+	&>span {
+		width: 4px;
+		height: 4px;
+		border-radius: 3px;
+		background-color: rgba(157, 157, 161, 1);
+	}
+}
+
+.image {
+	width: 96px;
+	height: 132px;
+	border-radius: 12px;
+}
+
+.imgAboutWrapper {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 22px;
+
+	font-size: 17px;
+	font-weight: 600;
+	line-height: 24px;
+	letter-spacing: -0.41px;
+	text-align: start;
+	color: $color000000;
+}
+
+.aboutWrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: start;
+	gap: 8px;
+}
+
+.pick {
+	font-size: 13px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.08px;
+	text-align: start;
+	color: rgba(60, 60, 67, 0.8);
+	margin-left: 10px;
+}
+
+.durationWrapper {
+	height: 24px;
+	width: auto;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-align: start;
+	color: rgba(60, 60, 67, 0.8);
+}
+
+.dot {
+	width: 1px;
+	height: 2px;
+	border-radius: 1px;
+	background-color: rgba(60, 60, 67, 0.8);
+}
+
+.iconWrapper {
+	height: 24px;
+	width: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: 10px;
+
+	font-size: 15px;
+	font-weight: 400;
+	line-height: 24px;
+	letter-spacing: -0.2px;
+	text-align: start;
+	color: rgba(60, 60, 67, 0.8);
+}
+
+.equalIcon {
+	height: 32px;
+	width: 32px;
+	background: transparent url('../../../src/assets/icons/Equal.svg') center no-repeat padding-box;
+}
+
+.dotsIcon {
+	height: 32px;
+	width: 32px;
+	background: transparent url('../../../src/assets/icons/Three_Dots.svg') center no-repeat padding-box;
+}

@@ -4,6 +4,7 @@ import highlight02 from "./assets/images/highlights02.png";
 import highlight03 from "./assets/images/highlights03.png";
 import highlight04 from "./assets/images/highlights04.png";
 import highlight05 from "./assets/images/highlights05.png";
+import highlight06 from "./assets/images/highlights06.png";
 import stay01 from "./assets/images/stays01.png";
 import stay02 from "./assets/images/stays02.png";
 import stay03 from "./assets/images/stays03.png";
@@ -56,6 +57,59 @@ const GetData = {
 					place: "Geysers",
 				},
 			],
+			plan: {
+				sectionTitle: "2 days plan",
+				days: [
+					{
+						day: "Day 1",
+						commonDuration: "40m",
+						cards: [
+							{
+								id: uuidv4(),
+								url: highlight01,
+								cardTitle: "Gullfoss Waterfall",
+								pick: true,
+								duration: "1h",
+								place: "Iconic hike",
+								traffic: "Light traffic",
+							},
+							{
+								id: uuidv4(),
+								url: highlight02,
+								cardTitle: "Reykjadalur Valley",
+								pick: true,
+								duration: "1h",
+								place: "Iconic hike",
+								traffic: "Light traffic",
+							},
+						],
+					},
+					{
+						day: "Day 2",
+						commonDuration: "1h 40m",
+						cards: [
+							{
+								id: uuidv4(),
+								url: highlight03,
+								cardTitle: "Geysir Thermal Field",
+								pick: true,
+								duration: "1h",
+								place: "Iconic hike",
+								traffic: "Light traffic",
+							},
+							{
+								id: uuidv4(),
+								url: highlight06,
+								cardTitle: "Thingvellir",
+								pick: false,
+								duration: "1h",
+								place: "Iconic hike",
+								traffic: "Light traffic",
+							},
+						],
+					},
+				],
+			},
 			stays: [
 				{
 					id: uuidv4(),
@@ -111,6 +165,59 @@ const GetData = {
 					place: "Geysers",
 				},
 			],
+			plan: {
+				sectionTitle: "2 days plan",
+				days: [
+					{
+						day: "Day 1",
+						commonDuration: "40m",
+						cards: [
+							{
+								id: uuidv4(),
+								url: highlight04,
+								cardTitle: "Skógafoss Waterfall",
+								pick: true,
+								duration: "1h",
+								place: "Iconic waterfall",
+								traffic: "Light traffic",
+							},
+							{
+								id: uuidv4(),
+								url: highlight05,
+								cardTitle: "Katla Ice Cave",
+								pick: true,
+								duration: "1h",
+								place: "Ice caves",
+								traffic: "Light traffic",
+							},
+						],
+					},
+					{
+						day: "Day 2",
+						commonDuration: "1h 40m",
+						cards: [
+							{
+								id: uuidv4(),
+								url: highlight03,
+								cardTitle: "Geysir Thermal Field",
+								pick: true,
+								duration: "1h",
+								place: "Iconic hike",
+								traffic: "Light traffic",
+							},
+							{
+								id: uuidv4(),
+								url: highlight06,
+								cardTitle: "Thingvellir",
+								pick: false,
+								duration: "1h",
+								place: "Iconic hike",
+								traffic: "Light traffic",
+							},
+						],
+					},
+				],
+			},
 			stays: [
 				{
 					id: uuidv4(),

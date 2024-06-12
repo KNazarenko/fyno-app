@@ -11,7 +11,7 @@
 
 	opacity: 1;
 	height: auto;
-	transition: 0.3s;
+	transition: all 0.3s ease 0s;
 
 	&::after {
 		content: '';
@@ -66,14 +66,12 @@
 	color: $color000000;
 }
 
-
-
 .dotIcon {
 	background-color: rgba(157, 157, 161, 1);
 }
 
 .icon {
-	height: 12.5px;
-	width: 12.5px;
-	background: transparent url('../../../src/assets/icons/Sparkle.svg') center no-repeat padding-box;
+	height: 24px;
+	width: 24px;
+	background: transparent url('../../../src/assets/icons/Daily_plan_dot.svg') center no-repeat padding-box;
 }
