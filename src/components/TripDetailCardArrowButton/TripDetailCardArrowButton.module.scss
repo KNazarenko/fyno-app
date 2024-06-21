@@ -3,16 +3,16 @@
 .root {
 	width: 40px;
 	height: 40px;
-	cursor: pointer;
 	border-radius: 20px;
 	background-color: $colorFFFFFF;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding: 0;
 }
 
 .icon {
-	height: 32px;
-	width: 32px;
+	height: 14px;
+	width: 16px;
 	background: transparent url('../../../src/assets/icons/Vector.svg') center no-repeat padding-box;
 }

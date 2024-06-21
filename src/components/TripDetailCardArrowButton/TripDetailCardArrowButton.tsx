@@ -1,21 +1,21 @@
 import { FC } from "react";
 import classNames from "classnames";
 import styles from "./TripDetailCardArrowButton.module.scss";
-import Button, { OnMouseEvent } from "../Common/Button/Button";
+import Button from "../Common/Button/Button";
 
 interface SaveButtonProps {
 	className?: string;
+	onClick?: () => void;
 }
 
-const TripDetailCardArrowButton: FC<SaveButtonProps> = ({ className }) => {
-	const onClickHandle = (e: OnMouseEvent) => {
-		console.log("Arrow Button", e);
-	};
-
+const TripDetailCardArrowButton: FC<SaveButtonProps> = ({
+	className,
+	onClick,
+}) => {
 	return (
 		<Button
 			className={classNames(styles.root, className)}
-			onClick={onClickHandle}>
+			onClick={onClick}>
 			<i className={styles.icon} />
 		</Button>
 	);

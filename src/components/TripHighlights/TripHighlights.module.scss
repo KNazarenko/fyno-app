@@ -1,5 +1,8 @@
 @import "../../assets/utilities/theme";
 
+$arrowTopMargin: 152px;
+$arrowMargin: 15px;
+
 .root {
 	width: 100%;
 	min-height: 200px;
@@ -49,6 +52,7 @@
 
 .sectionWrapper {
 	width: 100%;
+	position: relative;
 }
 
 .titleWrapper {
@@ -64,6 +68,49 @@
 	letter-spacing: -0.41px;
 	text-align: start;
 	color: $color000000;
+}
+
+.cardsContainer {
+	width: 94%;
+	position: relative;
+	transform: translateX(0px);
+	overflow: hidden;
+}
+
+.arrowButtonNext {
+	position: absolute;
+	top: $arrowTopMargin;
+	right: $arrowMargin;
+	z-index: 10;
+	opacity: 1;
+	transition: opacity 0.3s ease-in-out;
+}
+
+.arrowButtonNextHide {
+	opacity: 0;
+	cursor: default;
+	pointer-events: none;
+}
+
+.arrowButtonPrev {
+	position: absolute;
+	top: $arrowTopMargin;
+	left: $arrowMargin;
+	z-index: 10;
+	-moz-transform: scaleX(-1);
+	-o-transform: scaleX(-1);
+	-webkit-transform: scaleX(-1);
+	transform: scaleX(-1);
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+	cursor: default;
+	pointer-events: none;
+}
+
+.arrwButtonPrevShow {
+	opacity: 1;
+	cursor: pointer;
+	pointer-events: auto;
 }
 
 .cards {

@@ -29,7 +29,7 @@ const TripStays: FC<TripStaysProps> = ({ stays }) => {
 									{...item}
 									cardType={CardType.Stay}
 									isPickButtonVisible={index !== 2}
-									isArrowButtonVisible={index === 2}
+									isArrowButtonVisible={true}
 								/>
 							);
 						})}
