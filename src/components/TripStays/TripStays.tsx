@@ -1,15 +1,16 @@
 import { FC } from "react";
 import styles from "./TripStays.module.scss";
 import TripDetailDot from "../TripDetailDot/TripDetailDot";
-import TripDetailCard from "../TripDetailCard/TripDetailCard";
 import { CardType } from "../../enums/CardType";
-import { ITripStay } from "../../interfaces/ITripDetail";
+import { IStayCards } from "../../interfaces/ITripDetail";
+import TripCarouselContainer from "../TripCarouselContainer/TripCarouselContainer";
 
 interface TripStaysProps {
-	stays: Array<ITripStay>;
+	stays: Array<IStayCards>;
+	sectionTitle: string;
 }
 
-const TripStays: FC<TripStaysProps> = ({ stays }) => {
+const TripStays: FC<TripStaysProps> = ({ stays, sectionTitle }) => {
 	return (
 		<div className={styles.root}>
 			<div>
@@ -17,24 +18,12 @@ const TripStays: FC<TripStaysProps> = ({ stays }) => {
 					<i className={styles.icon} />
 				</TripDetailDot>
 			</div>
-			<div className={styles.sectionWrapper}>
-				<div className={styles.title}>Where to stay</div>
 
-				<div className={styles.cards}>
-					{stays &&
-						stays.map((item: ITripStay, index) => {
-							return (
-								<TripDetailCard
-									key={item.id}
-									{...item}
-									cardType={CardType.Stay}
-									isPickButtonVisible={index !== 2}
-									isArrowButtonVisible={true}
-								/>
-							);
-						})}
-				</div>
-			</div>
+			<TripCarouselContainer
+				cardsData={stays}
+				cardType={CardType.Stay}
+				sectionTitle={sectionTitle}
+			/>
 		</div>
 	);
 };

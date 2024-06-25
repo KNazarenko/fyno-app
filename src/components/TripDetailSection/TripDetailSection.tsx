@@ -36,11 +36,15 @@ const TripDetailSection: FC<TripDetailSectionProps> = ({ trip }) => {
 				showButton={showButton}
 			/>
 			<TripHighlights
-				highlights={highlights}
+				highlights={highlights.highlightCards}
 				hide={showButton === Buttons.ShowHighlights}
+				sectionTitle={highlights.sectionTitle}
 			/>
 			<TripPlan hide={showButton === Buttons.ShowDailyPlan} plan={plan} />
-			<TripStays stays={stays} />
+			<TripStays
+				stays={stays.stayCards}
+				sectionTitle={stays.sectionTitle}
+			/>
 		</section>
 	);
 };

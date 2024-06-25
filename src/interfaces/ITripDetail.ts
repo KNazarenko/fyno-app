@@ -2,26 +2,38 @@ export interface ITripDetail {
 	option: string;
 	regionTitle: string;
 	aboutRegion: string;
-	highlights: Array<ITripHighlight>;
+	highlights: ITripHighlights;
 	plan: ITripPlan;
-	stays: Array<ITripStay>;
+	stays: ITripStays;
 }
 
-export interface ITripHighlight {
+export interface ITripHighlights {
+	sectionTitle: string;
+	highlightCards: Array<IHighlightCards>;
+}
+
+export interface IHighlightCards {
 	id: string;
 	url: string;
 	title: string;
 	duration: string;
 	place: string;
+	isPick: boolean;
 }
 
-export interface ITripStay {
+export interface ITripStays {
+	sectionTitle: string;
+	stayCards: Array<IStayCards>;
+}
+
+export interface IStayCards {
 	id: string;
 	url: string;
 	title: string;
 	rating: string;
 	price: string;
 	place: string;
+	isPick: boolean;
 }
 
 export interface ITripPlan {

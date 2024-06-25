@@ -1,71 +1,19 @@
-import { FC, MutableRefObject, useEffect, useRef, useState } from "react";
+import { FC } from "react";
 import styles from "./TripHighlights.module.scss";
 import TripDetailDot from "../TripDetailDot/TripDetailDot";
-import TripDetailCard from "../TripDetailCard/TripDetailCard";
 import { CardType } from "../../enums/CardType";
-import { ITripHighlight } from "../../interfaces/ITripDetail";
+import { IHighlightCards } from "../../interfaces/ITripDetail";
 import classNames from "classnames";
-import TripDetailCardArrowButton from "../TripDetailCardArrowButton/TripDetailCardArrowButton";
-
-const showCardsNumber: number = 3;
-const cardWidth: number = 232;
+import TripCarouselContainer from "../TripCarouselContainer/TripCarouselContainer";
 
 interface TripHighlightsProps {
-	highlights: ITripHighlight[];
+	highlights: IHighlightCards[];
 	hide: boolean;
+	sectionTitle: string;
 }
 
 const TripHighlights: FC<TripHighlightsProps> = (props) => {
-	const { highlights, hide } = props;
-	const [positon, setPositon] = useState<number>(0);
-
-	const cardsRef: MutableRefObject<null> = useRef(null);
-	const allCardsNumberRef: MutableRefObject<number> = useRef(0);
-
-	const showPrevButton: boolean = positon < 0;
-	const hideNextButton: boolean =
-		Math.abs(positon) ===
-			Math.abs(
-				cardWidth * (allCardsNumberRef.current - showCardsNumber)
-			) || highlights.length === showCardsNumber;
-
-	useEffect(() => {
-		if (cardsRef.current) {
-			const cardsContainer: HTMLDivElement = cardsRef.current;
-			allCardsNumberRef.current = cardsContainer.childNodes.length;
-		}
-	}, []);
-
-	const onClickNextHandler = () => {
-		if (cardsRef.current) {
-			let newPosition = positon;
-			newPosition -= cardWidth * showCardsNumber;
-			newPosition = Math.max(
-				newPosition,
-				-cardWidth * (allCardsNumberRef.current - showCardsNumber)
-			);
-			const cardsContainer: HTMLDivElement = cardsRef.current;
-			cardsContainer.style.transform = `translateX(${newPosition}px)`;
-			cardsContainer.style.transition = "all 0.3s ease-in-out";
-			setPositon(newPosition);
-
-			console.log(newPosition);
-			console.log(
-				-cardWidth * (allCardsNumberRef.current - showCardsNumber)
-			);
-		}
-	};
-	const onClickPrevHandler = () => {
-		if (cardsRef.current) {
-			let newPosition = positon;
-			newPosition += cardWidth * showCardsNumber;
-			newPosition = Math.min(newPosition, 0);
-			const cardsContainer: HTMLDivElement = cardsRef.current;
-			cardsContainer.style.transform = `translateX(${newPosition}px)`;
-			cardsContainer.style.transition = "all 0.3s ease-in-out";
-			setPositon(newPosition);
-		}
-	};
+	const { highlights, hide, sectionTitle } = props;
 
 	return (
 		<div
@@ -77,40 +25,12 @@ const TripHighlights: FC<TripHighlightsProps> = (props) => {
 					<i className={styles.icon} />
 				</TripDetailDot>
 			</div>
-			<div className={styles.sectionWrapper}>
-				<div className={styles.titleWrapper}>
-					<div className={styles.title}>Region highlights</div>
-				</div>
-				<div className={styles.cardsContainer}>
-					<TripDetailCardArrowButton
-						className={classNames(styles.arrowButtonPrev, {
-							[styles.arrwButtonPrevShow]: showPrevButton,
-						})}
-						onClick={onClickPrevHandler}
-					/>
 
-					<TripDetailCardArrowButton
-						className={classNames(styles.arrowButtonNext, {
-							[styles.arrowButtonNextHide]: hideNextButton,
-						})}
-						onClick={onClickNextHandler}
-					/>
-					<div className={styles.cards} ref={cardsRef}>
-						{highlights &&
-							highlights.map((item: ITripHighlight, index) => {
-								return (
-									<TripDetailCard
-										key={item.id}
-										{...item}
-										cardType={CardType.Highlights}
-										isPickButtonVisible={index !== 2}
-										isArrowButtonVisible={false}
-									/>
-								);
-							})}
-					</div>
-				</div>
-			</div>
+			<TripCarouselContainer
+				cardsData={highlights}
+				cardType={CardType.Highlights}
+				sectionTitle={sectionTitle}
+			/>
 		</div>
 	);
 };

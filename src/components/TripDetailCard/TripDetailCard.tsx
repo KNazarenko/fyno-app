@@ -3,7 +3,6 @@ import styles from "./TripDetailCard.module.scss";
 import { CardType } from "../../enums/CardType";
 import TripDetailCuratorPickButton from "../TripDetailCuratorPickButton/TripDetailCuratorPickButton";
 import TripDetailCardSaveButton from "../TripDetailCardSaveButton/TripDetailCardSaveButton";
-import TripDetailCardArrowButton from "../TripDetailCardArrowButton/TripDetailCardArrowButton";
 
 interface TripDetailCardProps {
 	id: string;
@@ -14,8 +13,7 @@ interface TripDetailCardProps {
 	rating?: string;
 	price?: string;
 	cardType: CardType;
-	isPickButtonVisible?: boolean;
-	isArrowButtonVisible?: boolean;
+	isPick: boolean;
 }
 
 const TripDetailCard: FC<TripDetailCardProps> = (props) => {
@@ -27,21 +25,17 @@ const TripDetailCard: FC<TripDetailCardProps> = (props) => {
 		rating = "",
 		price = "",
 		cardType,
-		isPickButtonVisible = true,
-		isArrowButtonVisible = false,
+		isPick,
 	} = props;
 	return (
 		<div className={styles.root}>
 			<div className={styles.images}>
 				<img className={styles.image} src={url} alt={title} />
 			</div>
-			{isPickButtonVisible && (
+			{isPick && (
 				<TripDetailCuratorPickButton className={styles.pickButton} />
 			)}
 			<TripDetailCardSaveButton className={styles.saveButton} />
-			{isArrowButtonVisible && (
-				<TripDetailCardArrowButton className={styles.arrowButton} />
-			)}
 
 			<div className={styles.footer}>
 				<div className={styles.title}>{title}</div>
