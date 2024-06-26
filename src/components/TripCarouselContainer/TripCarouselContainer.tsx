@@ -7,7 +7,7 @@ import classNames from "classnames";
 import TripDetailCardArrowButton from "../TripDetailCardArrowButton/TripDetailCardArrowButton";
 
 const showCardsNumber: number = 3;
-const cardWidth: number = 232;
+const cardWidth: number = 222;
 
 export type cardsData = IHighlightCards | IStayCards;
 
